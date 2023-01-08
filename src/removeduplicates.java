@@ -23,3 +23,7 @@ public class removeduplicates {
         }
     }
 }
+
+
+//DONE THE OPTIMAL SOLUTION --> TWO POINTERS METHOD --> T.C - LOG(N)
+// NORMAL METHOD --> COPY ARRAY ELEMENTS INTO HASHSET AND RETURN THE SET.SIZE()
