@@ -16,6 +16,7 @@ public class removeduplicates {
     }
     public static void main(String[] args) {
         int[] arr = {1,1,1,2,2,3};
+        Arrays.sort(arr);
         int k = findSizeWithoutDup(arr);
         for(int i=0;i<=k;i++)
         {

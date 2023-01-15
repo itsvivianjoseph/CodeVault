@@ -4,7 +4,7 @@ public class minnoswaps {
     public static void main(String[] args)
     {
         String input = "[[][][[]]]][][";
-        Stack stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<Character>();
         for(int i=0;i<input.length();i++)
         {
             if(input.charAt(i)=='[') stack.push(input.charAt(i));
