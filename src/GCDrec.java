@@ -1,7 +1,7 @@
 public class GCDrec {
     public static void main(String[] args) {
-    int m=12;
-    int n=13;
+    int m=6;
+    int n=5;
     int min = Math.min(m,n);
     int max = Math.max(m,n);
     int temp = min;
