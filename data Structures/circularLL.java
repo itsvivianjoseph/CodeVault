@@ -101,7 +101,7 @@ public class circularLL <T>{
         sectemp.next=temp.next;        
     }
     public static void main(String[] args) {
-        circularLL<Integer> list = new circularLL();
+        circularLL<Integer> list = new circularLL<Integer>();
         list.insertAtEnd(10);
         list.insertAtEnd(20);
         list.insertAtEnd(30);
