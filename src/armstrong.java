@@ -2,8 +2,7 @@
 
 public class armstrong {
     static boolean asn(int n){
-        int asn = 0;
-        int N=n;
+        int asn = 0,N=n;
         while(N!=0){
             int digit = N%10;
             asn+=Math.pow(digit,3);
