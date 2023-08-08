@@ -30,7 +30,7 @@ class nextPermutation
         }
     }
     public static void main(String[] args) {
-        int[] nums = {1,2,3};
+        int[] nums = {2,3,1,4,5};
         int idx=0;
         ArrayList<ArrayList<Integer>> ans = permute(nums);
         for(int i=0;i<ans.size();i++)
