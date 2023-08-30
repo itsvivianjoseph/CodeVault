@@ -29,22 +29,6 @@ class nextPermutation
             }
         }
     }
-    public static void main(String[] args) {
-        int[] nums = {2,3,1,4,5};
-        int idx=0;
-        ArrayList<ArrayList<Integer>> ans = permute(nums);
-        for(int i=0;i<ans.size();i++)
-        {
-            ArrayList<Integer> arr = ans.get(i);
-            int[] item = listToArray(arr);
-            if(isSame(item,nums))
-            {
-                idx=i+1;
-                break;
-            }
-        }
-        System.out.println(ans.get(idx));
-    }
     private static int[] listToArray(ArrayList<Integer> arr) {
         int[] item = new int[arr.size()];
         for(int i=0;i<arr.size();i++) item[i]=arr.get(i);
@@ -60,6 +44,22 @@ class nextPermutation
             }
             return true;
         }
+    }
+    public static void main(String[] args) {
+        int[] nums = {2,3,1,4,5};
+        int idx=0;
+        ArrayList<ArrayList<Integer>> ans = permute(nums);
+        for(int i=0;i<ans.size();i++)
+        {
+            ArrayList<Integer> arr = ans.get(i);
+            int[] item = listToArray(arr);
+            if(isSame(item,nums))
+            {
+                idx=i+1;
+                break;
+            }
+        }
+        System.out.println(ans.get(idx));
     }
 }
 

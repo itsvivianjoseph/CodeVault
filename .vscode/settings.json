@@ -2,7 +2,9 @@
     "java.project.sourcePaths": [
         "sort",
         "src",
-        "data Structures"
+        "data Structures",
+        "leetcode",
+        "ZOHO"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
