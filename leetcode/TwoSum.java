@@ -1,9 +1,11 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 
 class TwoSum {
     static int[] twoSum(int[] nums, int target) 
     {
         HashMap<Integer,Integer> hm = new HashMap<>();
+        // hm.remove(hm)
         for(int i=0;i<nums.length;i++)
         {
             int diff = target-nums[i];
@@ -17,6 +19,6 @@ class TwoSum {
         int target = 6;
         int[] res = twoSum(arr,target);
         System.out.println(res[0]);
-        System.out.print(res[1]);
+        System.out.println(res[1]);
     }
 }

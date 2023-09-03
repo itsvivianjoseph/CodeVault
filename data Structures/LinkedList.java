@@ -86,6 +86,19 @@ public class LinkedList {
         temp.next = newnode;
     }
 
+    public void fastAndSlowPointer()
+    {
+        Node fast = head;
+        Node slow = head;
+        while(fast!=null && fast.next!=null)
+        {
+            slow = slow.next;
+            System.out.println("slow "+slow.data);
+            fast = fast.next.next;
+            // System.out.println("fast "+fast.data);
+        }
+    }
+
     public void deleteAtPos(int pos)
     {
         if(head == null)
@@ -171,17 +184,30 @@ public class LinkedList {
         }
     }
     
-    public void reverseList()
-    {
-        Node prev=null;
-        Node current=head;
-        Node nxt=head.next;
-        while(current!=null)
+    // public void reverseList()
+    // {
+    //     Node prev=null;
+    //     Node current=head;
+    //     Node nxt=head.next;
+    //     while(current!=null)
+    //     {
+    //         nxt = current.next;
+    //         current.next = prev;
+    //         prev = current;
+    //         current = nxt;
+    //     }
+    //     head = prev;
+    // }
+    public void reverseList(){
+        Node prev = null;
+        Node curr = head ; 
+        Node nxt = curr;
+        while(curr!=null)
         {
-            nxt = current.next;
-            current.next = prev;
-            prev = current;
-            current = nxt;
+            nxt = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nxt;
         }
         head = prev;
     }
@@ -192,7 +218,11 @@ public class LinkedList {
         obj.insertAtBegining(300);
         obj.insertAtBegining(400);
         obj.insertAtBegining(500);
+        obj.insertAtBegining(600);
+        obj.insertAtBegining(700);
         obj.reverseList();
         obj.display();
+        // System.out.println();
+        // obj.fastAndSlowPointer();
     }
 }

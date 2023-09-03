@@ -1,5 +1,5 @@
 import java.util.Random;
-class Mergesorting{
+class Merge{
     static void mergersort(int[] arr){
         //if size of the array is <2 => one/zero element
         if(arr.length<2) return;
@@ -52,7 +52,6 @@ class Mergesorting{
             k++;
         }
     }
-
     public static void main(String[] args) {
         int[] arr = new int[100000000];
         Random rand = new Random();

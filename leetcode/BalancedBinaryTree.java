@@ -42,5 +42,4 @@ public class BalancedBinaryTree {
         }
         return isSubtreeBalanced(root);
     }
-
 }

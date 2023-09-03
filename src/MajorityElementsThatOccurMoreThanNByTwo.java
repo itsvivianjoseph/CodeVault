@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class MajorityElementsThatOccurMoreThanNByTwo {
     // static int MajorityElement(int[] arr)
     // {
