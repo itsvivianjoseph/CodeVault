@@ -1,6 +1,5 @@
 //not working
 
-
 public class LongestPallindromeSubString {
     static String palindrome(String str)
     {

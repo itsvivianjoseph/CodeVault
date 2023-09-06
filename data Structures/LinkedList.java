@@ -211,6 +211,19 @@ public class LinkedList {
         }
         head = prev;
     }
+    public void removeNthFromEnd(Node head, int n) {
+        if(head==null) return;
+        int count=1;
+        Node curr = head;
+        Node prev = head;
+        while(count!=n)
+        {
+            count++;
+            prev = curr;
+            curr=curr.next;
+        }
+        prev.next = curr.next;
+    }
     public static void main(String[] args) {
         LinkedList obj = new LinkedList();
         obj.insertAtBegining(100);       
@@ -221,7 +234,12 @@ public class LinkedList {
         obj.insertAtBegining(600);
         obj.insertAtBegining(700);
         obj.reverseList();
+        obj.removeNthFromEnd(obj.head, 2);
         obj.display();
+        // String a = "aa";
+        // String b = "aab";
+        // b.
+        // System.out.println(b.contains(a));
         // System.out.println();
         // obj.fastAndSlowPointer();
     }
