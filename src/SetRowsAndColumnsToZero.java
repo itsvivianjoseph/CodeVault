@@ -45,7 +45,6 @@
 public class SetRowsAndColumnsToZero
 {
     static int[][] arr = {{0,1,1},{1,0,1},{1,1,0}};
-    static void setZeros(){}
     public static void main(String[] args) {
         int col0=1;
         for (int i = 0; i < arr.length; i++) {
