@@ -1,29 +1,39 @@
-// my solution
+// my solution - 13 ms
 public class LongestSubstringWithoutRepeatingCharacters {
     
     static int lengthOfLongestSubstring(String s) {
-        
+
+        if( s.equals(" ") || s.length()==1 ) return 1;
+
         String substr = "";
         int max = 0, count = 0, len = s.length();
 
-        for (int i = 0; i < len; i++) {
-            if (substr.contains(String.valueOf(s.charAt(i)))) {
-                if (substr.charAt(0) == s.charAt(i)) {
+        for (int i = 0; i < len; i++) 
+        {
+            if (substr.contains(String.valueOf(s.charAt(i)))) 
+            {
+                if (substr.charAt(0) == s.charAt(i)) 
+                {
                     substr = substr.substring(1);
                     substr += s.charAt(i);
-                } else {
+                } 
+                else 
+                {
                     if (count > max) max = count;
                     int index = substr.indexOf(s.charAt(i));
                     substr = substr.substring(index + 1) + s.charAt(i);
                     count = substr.length();
                 }
-            } else {
+            } 
+            else 
+            {
                 substr += s.charAt(i);
                 count++;
             }
         }
 
         return Math.max(max, count);
+
     }
 
     public static void main(String[] args) {
@@ -32,83 +42,61 @@ public class LongestSubstringWithoutRepeatingCharacters {
 }
 
 
-// my solution
-// public class LongestSubstringWithoutRepeatingCharacters {
-
-//     static int lengthOfLongestSubstring(String s) {
-        
-//         String substr="";
-//         int max = 0 , count=0 , len = s.length();
-
-//         for(int i=0;i<len;i++)
-//         {
-//             if(substr.contains(String.valueOf(s.charAt(i)))) {
-//                if(substr.charAt(0)==s.charAt(i)){
-//                 substr = substr.substring(1);
-//                 substr+=s.charAt(i);
-//                }
-//                else{
-//                 if(max<count) max = count;
-//                 substr = "";
-//                 substr+=s.charAt(i);
-//                 count = 1;
-//                }
+//sliding window - 5ms
+// class Solution {
+//     public int lengthOfLongestSubstring(String s) {
+//         Set<Character>set=new HashSet<>();
+//         int maxLength=0;
+//         int left=0;
+//         for(int right=0;right<s.length();right++){
+           
+//             if(!set.contains(s.charAt(right))){
+//                 set.add(s.charAt(right));
+//                 maxLength=Math.max(maxLength,right-left+1);
+                
+//             }else{
+//                 while(s.charAt(left)!=s.charAt(right)){
+//                     set.remove(s.charAt(left));
+//                     left++;
+//                 }
+//                 set.remove(s.charAt(left));left++;
+//                 set.add(s.charAt(right));
 //             }
-//             else {
-//                 substr+=s.charAt(i);
-//                 count++;
-//             }
+            
 //         }
-        
-//         return max>count ? max : count;
-//     }
-
-//     public static void main(String[] args) {
-//         System.out.println(lengthOfLongestSubstring("ohvhjdml"));
+//         return maxLength;
 //     }
 // }
 
 
-
-
-
-//not my solution - gpt
-// public class LongestSubstringWithoutRepeatingCharacters {
-
-//     static int lengthOfLongestSubstring(String s) {
+//gpt solution using arrays - 2ms
+// class Solution {
+//     public int lengthOfLongestSubstring(String s) {
 //         int max = 0;
 //         int len = s.length();
-//         int[] charIndex = new int[256]; // Assuming ASCII characters
+//         int[] charIndex = new int[256]; 
 
-//         // Initialize the charIndex array with -1 (indicating characters not seen yet)
 //         for (int i = 0; i < 256; i++) {
 //             charIndex[i] = -1;
 //         }
 
-//         int start = 0; // Starting index of the current substring
+//         int start = 0; 
 
 //         for (int i = 0; i < len; i++) {
-//             // Check if the current character has been seen in the current substring
 //             if (charIndex[s.charAt(i)] >= start) {
-//                 start = charIndex[s.charAt(i)] + 1; // Move the start to the next index
+//                 start = charIndex[s.charAt(i)] + 1;
 //             }
             
-//             // Update the index of the current character
 //             charIndex[s.charAt(i)] = i;
             
-//             // Calculate the length of the current non-repeating substring
 //             int currentLength = i - start + 1;
             
-//             // Update the maximum length if needed
 //             if (currentLength > max) {
 //                 max = currentLength;
 //             }
 //         }
 
 //         return max;
-//     }
 
-//     public static void main(String[] args) {
-//         System.out.println(lengthOfLongestSubstring("aab"));
 //     }
 // }
