@@ -19,7 +19,7 @@ public class dummy {
         while(idx!=len-1)
         {
             if(arr[idx]==arr1[idx]) {
-                for(int i=idx;i<len;i++) System.out.print(arr[i]+" ");
+                while(idx!=len) System.out.print(arr[idx++]+" ");
                 return;
             }
             else System.out.print(arr1[idx++]+" ");
