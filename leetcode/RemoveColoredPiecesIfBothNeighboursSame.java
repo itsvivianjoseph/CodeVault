@@ -1,7 +1,10 @@
 //optimal sol
+
+import java.util.HashMap;
+
 public class RemoveColoredPiecesIfBothNeighboursSame {
     public boolean winnerOfGame(String colors) {
-        Map<Character, Integer> c = new HashMap<>();
+        HashMap<Character, Integer> c = new HashMap<Character, Integer>();
         c.put('A', 0);
         c.put('B', 0);
         
