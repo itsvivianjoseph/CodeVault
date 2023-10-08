@@ -1,3 +1,4 @@
+package others;
 public class Sqroot {
     static int mySqrt(int x) {
         if(x==0) return x;

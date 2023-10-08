@@ -1,3 +1,4 @@
+package others;
 public class PowerOfThree {
     public static void main(String[] args) {
         int n = 8;

@@ -1,3 +1,4 @@
+package others;
 //optimal sol
 
 import java.util.HashMap;

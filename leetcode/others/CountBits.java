@@ -1,3 +1,4 @@
+package others;
 public class CountBits {
     static int ToBinary(int a)
     {

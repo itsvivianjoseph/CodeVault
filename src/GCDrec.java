@@ -9,9 +9,7 @@ public class GCDrec {
     }
     static int greatcomdiv(int n,int m,int temp)
     {
-      if((n%temp==0)&&(m%temp==0))
-        return temp;
-      else 
-        return greatcomdiv(n,m,temp-1);
+      if((n%temp==0)&&(m%temp==0)) return temp;
+      return greatcomdiv(n,m,temp-1);
     }
 }

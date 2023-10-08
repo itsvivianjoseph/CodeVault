@@ -1,3 +1,4 @@
+package Arrays;
 public class RangeSum {
     class NumArray {
         int[] arr ;
