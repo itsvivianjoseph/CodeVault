@@ -252,12 +252,12 @@ public class binaryTree {
     }
 
     public static void main(String[] args) {
-        binaryTree tree = new binaryTree(10);
+        binaryTree tree = new binaryTree(4);
         
-        tree.insertLeft(tree.root, 2);
-        tree.insertRight(tree.root, 15);
-        tree.insertLeft(tree.root.left, 21);
-        tree.insertRight(tree.root.left, 150);
+        tree.insertLeft(tree.root, 5);
+        tree.insertRight(tree.root, 6);
+        tree.insertLeft(tree.root.left, 7);
+        tree.insertRight(tree.root.left, 8);
 
         preOrder(tree.root);
         System.out.println();
