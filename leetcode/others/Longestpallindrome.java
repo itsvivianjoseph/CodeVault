@@ -1,3 +1,5 @@
+package others;
+
 public class Longestpallindrome {
     public int longestPalindrome(String s) {
         int[] freq = new int[128];
