@@ -17,7 +17,6 @@ public class MinimumNumberofOperationstoMakeArrayEmpty {
 
         while (iterator.hasNext()) {
             Map.Entry<Integer, Integer> entry = iterator.next();
-            int key = entry.getKey();
             int value = entry.getValue();
 
             if (value < 2) {

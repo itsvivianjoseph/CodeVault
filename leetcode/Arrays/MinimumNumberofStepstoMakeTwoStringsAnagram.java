@@ -1,9 +1,9 @@
 // incomplete
 package Arrays;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map.Entry;
+// import java.util.Arrays;
+// import java.util.HashMap;
+// import java.util.Map.Entry;
 
 public class MinimumNumberofStepstoMakeTwoStringsAnagram {
     public static void main(String[] args) {
@@ -48,9 +48,9 @@ public class MinimumNumberofStepstoMakeTwoStringsAnagram {
     //         System.out.println("Key: " + key + ", Value: " + value);
     //     }
     // }
-    private static String sortString(String input) {
-        char[] charArray = input.toCharArray();
-        Arrays.sort(charArray);
-        return new String(charArray);
-    }
+    // private static String sortString(String input) {
+    //     char[] charArray = input.toCharArray();
+    //     Arrays.sort(charArray);
+    //     return new String(charArray);
+    // }
 }
