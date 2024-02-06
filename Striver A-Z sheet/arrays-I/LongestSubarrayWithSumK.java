@@ -22,7 +22,7 @@ public class LongestSubarrayWithSumK {
         return maxLen;
     }
     public static void main(String[] args) {
-        int[] nums = {-1, 1, 1};
-        System.out.println(findLongestSubarrWithSumK(nums,3));
+        int[] nums = {2, 3, 5, 1, 9};
+        System.out.println(findLongestSubarrWithSumK(nums,10));
     }    
 }
