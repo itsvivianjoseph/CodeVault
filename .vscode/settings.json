@@ -1,11 +1,11 @@
 {
     "java.project.sourcePaths": [
         "sort",
-        "src",
-        "data Structures",
         "leetcode",
+        "data Structures",
+        "Striver A-Z sheet",
         "Reservation Systems",
-        "Striver A-Z sheet"
+        "sample"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
